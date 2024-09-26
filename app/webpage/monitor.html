@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js" defer></script>
+    <script src="test.js" defer></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css" rel="stylesheet">
+
+    <title>Water monitoring dashboard</title>
+  </head>
+  <body style="height: 800px; width: 1200px; padding: 0; margin: 0; overflow-x: hidden; overflow-y: hidden;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn-close" onclick="eel.close_gui()" aria-label="Close"></button>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+<div class="container vh-100">
+    <div class="row h-50" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <h5 class="card-header">Tank 1</h5>
+                    <div class="card-body">
+                      <div class="row">
+                      <div class="col" id="barchart"></div>
+                      <div class="col">
+                        <div id="gauge1"></div>
+                        <div id="gauge2"></div>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <h5 class="card-header">Tank 2</h5>
+                <div class="card-body">
+                  <div class="row">
+                  <div class="col" id="barchart2"></div>
+                  <div class="col">
+                    <div id="gauge3"></div>
+                    <div id="gauge4"></div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <h5 class="card-header">Tank 3</h5>
+                <div class="card-body">
+                  <div class="row">
+                  <div class="col" id="barchart3"></div>
+                  <div class="col">
+                    <div id="gauge5"></div>
+                    <div id="gauge6"></div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="row h-50" style="padding: 20px;">
+        <div id="line-chart"></div>
+    </div>
+  </div>
+  </body>
+  <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
+</html>
